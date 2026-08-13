@@ -36,7 +36,6 @@
         
         /* Game Styles */
         #game-container {
-            display: none;
             width: 100%;
             max-width: 800px;
             height: 500px;
@@ -675,7 +674,7 @@
             const bulletEl = document.createElement('div');
             bulletEl.className = 'bullet';
             bulletEl.style.left = (playerX + 22) + 'px';
-            bulletEl.style.bottom = '70px';
+            bulletEl.style.top = (gameContainer.clientHeight - 70) + 'px';
             gameContainer.appendChild(bulletEl);
             
             bullets.push({
